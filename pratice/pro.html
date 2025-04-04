@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Service</title>
+    <style>
+        body {
+            background-color: white;
+            font-style: oblique;
+            text-align: center;
+        }
+        .bod {
+            border-style: inset;
+            border-color: brown;
+            box-shadow: 10px 10px;
+            padding: 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 20px;
+            position: relative;
+        }
+        .cat {
+            border-style: hidden;
+            background-color: lightpink;
+            padding: 20px;
+            width: 200px;
+            font-size: 20px;
+            z-index: 2; /* Keep it above the scrolling background */
+        }
+        .clickable {
+            cursor: pointer;
+            padding: 10px;
+            display: block;
+        }
+        .clickable:hover {
+            color: blue;
+        }
+        .right-column {
+            position: relative;
+            width: 60%;
+            text-align: center;
+        }
+        /* Background scrolling effect */
+        .slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            z-index: 1; /* Keeps it behind the list */
+        }
+        .slideshow {
+            display: flex;
+            width: 400%;
+            animation: scrollHorizontal 10s linear infinite;
+        }
+        .slideshow img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        @keyframes scrollHorizontal {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        /* Images box */
+        .image-box {
+            display: none;
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-box img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            transition: transform 0.5s;
+        }
+        /* Highlight selected image */
+        .highlight img {
+            transform: scale(1.2);
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="bod">
+        <h1>HOME SERVICE</h1>
+    </div>
+    <br><br>
+    <div class="container">
+        <!-- Left Column (List) -->
+        <div class="cat">
+            <h3>ALL CATEGORIES</h3>
+            <ul>
+                <li class="clickable" onclick="showImage('homeclean.jpg', 'home')">Home Cleaning</li>
+                <li class="clickable" onclick="showImage('handyman.jpg', 'furni')">Furniture Assembly</li>
+                <li class="clickable" onclick="showImage('electrical.jpg', 'elect')">Electrician</li>
+                <li class="clickable" onclick="showImage('plumbing.jpg', 'plumb')">Plumbing</li>
+            </ul>
+        </div>
+
+        <!-- Right Column (Images) -->
+        <div class="right-column">
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <img src="homeclean.jpg">
+                    <img src="handyman.jpg">
+                    <img src="electrical.jpg">
+                    <img src="plumbing.jpg">
+                </div>
+            </div>
+            <div id="home" class="image-box"><img src="homeclean.jpg"></div>
+            <div id="furni" class="image-box"><img src="handyman.jpg"></div>
+            <div id="elect" class="image-box"><img src="electrical.jpg"></div>
+            <div id="plumb" class="image-box"><img src="plumbing.jpg"></div>
+        </div>
+    </div>
+
+    <script>
+        function showImage(imageSrc, id) {
+            // Remove highlight from all images
+            document.querySelectorAll('.image-box').forEach(imgBox => {
+                imgBox.classList.remove('highlight');
+                imgBox.style.display = 'none';
+            });
+
+            // Show selected image and highlight it
+            let selectedImage = document.getElementById(id);
+            selectedImage.style.display = 'block';
+            selectedImage.classList.add('highlight');
+        }
+    </script>
+</body>
+</html>

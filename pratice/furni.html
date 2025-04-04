@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <link rel="icon" type="image/webp" href="logo1.webp">
+        <title>HOME SERVICE</title>
+        <style>
+            body{
+                font-family: sans-serif;
+                background-color:white;
+            }
+            .bod{
+                border-style:inset;
+                border-color:brown;
+                box-shadow: 10px 10px;
+                text-align:center;
+            }
+            h3{
+                font-style:italic;
+                color:palevioletred;
+                font-size:30px;
+            }
+            .butc{
+                display:flex;
+                justify-content:center;
+                gap:30px;
+            }
+            button{
+                background-color:beige;
+                border-style:none;
+                border-radius:30px;
+                text-align:center;
+                color:black;
+                padding:15px;
+            }
+            button:hover{
+             background-color:pink;
+             color: white;
+            }
+            .content {
+                display: none;
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow:10px 10px;
+                max-width: 600px;
+                background-color:whitesmoke;
+                margin: auto;
+            }
+            .content.active {
+                display: block;
+            }
+            ul {
+                text-align: left;
+                padding: 0;
+            }
+            ul li {
+                list-style-type: none;
+                padding: 5px 0;
+            }
+            .book{
+               margin-left:100px;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bod">
+            <h1> HOME SERVICE</h1></div>
+            <br><br>
+        <h1>🏠🔨 Furniture Cleaning</h1>
+        <br>
+        <h3>PROVIDES</h3><br>
+        <div class="butc">
+         <button onclick="showService('Leather cleaning')">Leather cleaning</button>
+         <button onclick="showService('Mattress')">Mattress cleaning</button>
+         <button onclick="showService('wooden')">Wooden furniture cleaning</button>
+         <button onclick="showService('carpet')" >Carpet Cleaning</button>
+        </div>
+        <div id="Leather cleaning" class="content">
+            <h2>Leather Cleaning Services</h2>
+            <ul>
+                <li>✅ Gentle Cleaning – Removes dust and dirt</li>
+                <li>✅ Conditioning & Moisturizing – Prevents cracks and dryness</li>
+                <li>✅ Stain Treatment – Removes ink, spills, and discoloration</li>
+                <li>✅ Leather Polishing – Restores shine and smoothness</li>
+                <li>✅ Protective Coating – Guards against spills & damage</li>
+            </ul>
+        </div>
+        <div id="Mattress" class="content">
+            <h2>Mattress Cleaning Services</h2>
+            <ul>
+                <li>✅ Deep Vacuuming – Removes dust, allergens, and dead skin</li>
+                <li>✅ Steam Sanitization – Kills bacteria and bed bugs</li>
+                <li>✅ Deodorization – Removes bad odors</li>
+                <li>✅ Stain Removal – Removes sweat, food, or liquid stains</li>
+            </ul>
+        </div>
+        <div id="wooden" class="content">
+            <h2>Mattress Cleaning Services</h2>
+            <ul>
+                <li>✅ Dusting & Polishing – Removes dirt & enhances shine</li>
+                <li>✅ Deep Cleaning – Removes grime without damaging wood</li>
+               <li>✅ Scratch & Stain Removal – Buffing out scratches</li>
+                <li>✅ Protective Coating – Adds a layer to prevent future </li>
+                <li>✅ Termite Treatment – Prevents insect infestations</li>
+            </ul>
+        </div>
+        <div id="carpet" class="content">
+            <h2>Carpet Cleaning Services</h2>
+            <ul>
+                <li>✅ Dry Vacuuming – Removes surface dirt and dust</li>
+                <li>✅ Deep Steam Cleaning – Extracts embedded dirt & bacteria</li>
+                <li>✅ Shampooing & Stain Removal – Eliminates tough stains</li>
+                <li>✅ Odor Neutralization – Removes pet and smoke odors</li>
+            </ul>
+        </div>
+        <br>
+        <h3>Importance of Furniture Cleaning</h3>
+        <p>1️ Improves Indoor Air Quality 🌬️
+        </p>
+        <p>2️ Extends Furniture Lifespan 🛋️</p>
+        <p>3️  Enhances Hygiene & Health 🏠</p>
+        <p>4️ Maintains Aesthetic Appeal ✨</p>
+        <br>
+        <div class="book">
+            <button onclick="gotonextpage()">BOOK NOW</button>
+           </div>
+            <script>
+            function showService(serviceId) {
+                // Hide all content sections
+                document.querySelectorAll('.content').forEach(section => {
+                    section.classList.remove('active');
+                });
+    
+                // Show selected service
+                document.getElementById(serviceId).classList.add('active');
+            }
+            function gotonextpage(){
+                window.location.href="book.html";
+            }
+        </script>
+    </body>
+</html>

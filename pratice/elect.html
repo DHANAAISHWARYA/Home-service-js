@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <link rel="icon" type="image/webp" href="logo1.webp">
+        <title>HOME SERVICE</title>
+        <style>
+            body{
+                font-family: sans-serif;
+                background-color:white;
+            }
+            .bod{
+                border-style:inset;
+                border-color:brown;
+                box-shadow: 10px 10px;
+                text-align:center;
+            }
+            h3{
+                font-style:italic;
+                color:palevioletred;
+                font-size:30px;
+            }
+            .butc{
+                display:flex;
+                justify-content:center;
+                gap:30px;
+            }
+            button{
+                background-color:beige;
+                border-style:none;
+                border-radius:30px;
+                text-align:center;
+                color:black;
+                padding:15px;
+            }
+            button:hover{
+             background-color:pink;
+             color: white;
+            }
+            .content {
+                display: none;
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow:10px 10px;
+                max-width: 600px;
+                background-color:whitesmoke;
+                margin: auto;
+            }
+            .content.active {
+                display: block;
+            }
+            ul {
+                text-align: left;
+                padding: 0;
+            }
+            ul li {
+                list-style-type: none;
+                padding: 5px 0;
+            }
+            .book{
+               margin-left:100px;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bod">
+            <h1> HOME SERVICE</h1></div>
+            <br><br>
+        <h1>💡Electrical WorKs ⚡</h1>
+        <br>
+        <h3>PROVIDES</h3><br>
+       <div class="butc">
+        <button onclick="showService('elect install')">ELectrical Installation</button>
+        <button onclick="showService('Repairs')">Electrical Repairs</button>
+        <button onclick="showService('Application')">Applicance & device installation</button>
+        <button onclick="showService('Protection')">Electrical Protection</button>
+       </div><br>
+       <div id="elect install" class="content">
+        <h2>Electrical Installation</h2>
+        <ul>
+            <li>✔️ New Wiring & Rewiring – For new homes, renovations, and repairs</li>
+             <li>   ✔️ Switchboard Upgrades – Ensures safety and better power distribution</li>
+               <li> ✔️ Ceiling Fan Installation – Proper fitting and wiring for efficient cooling</li>
+                <li>✔️ Lighting Installation – Indoor, outdoor, LED, decorative, and smart lighting</li>
+                <li>✔️ Power Outlets & Switch Installation – Adds or upgrades electrical outlets</li>
+        </ul>
+    </div>
+    <div id="Repairs" class="content">
+        <h2>Electrical Repairs</h2>
+        <ul>
+            <li>✔️ Fixing Power Failures & Tripping Issues – Diagnosing circuit overloads</li>
+                <li>✔️ Repairing Faulty Switches & Outlets – Fixing loose or non-working sockets</li>
+              <li> ✔️ Circuit Breaker & Fuse Repairs – Prevents electrical hazards and failures</li>
+                <li>✔️ Wiring Fault Detection & Repair – Avoids fire risks and short circuits</li>
+               <li> ✔️ Emergency Electrical Repairs – 24/7 services for urgent power issues</li>
+        </ul>
+    </div>
+    <div id="Application" class="content">
+        <h2>Application and Device Installation</h2>
+        <ul>
+            <li>✔️ New Wiring & Rewiring – For new homes, renovations, and repairs</li>
+               <li> ✔️ Switchboard Upgrades – Ensures safety and better power distribution</li>
+                <li>✔️ Ceiling Fan Installation – Proper fitting and wiring for efficient cooling</li>
+                <li>✔️ Lighting Installation – Indoor, outdoor, LED, decorative, and smart lighting</li>
+               <li>✔️ Power Outlets & Switch Installation – Adds or upgrades electrical outlets
+                
+                </li>
+        </ul>
+    </div>
+    <div id="Protection" class="content">
+        <h2>Electrical Protection</h2>
+        <ul>
+            <li>✔️ Surge Protection Installation – Protects devices from voltage spikes</li>
+              <li>  ✔️ Earthing & Grounding Services – Prevents shocks and electrical hazards</li>
+                <li>✔️ Smoke Detector Installation – Ensures fire safety</li>
+                <li>✔️ Childproofing Electrical Outlets – Safety measures for kids</li>
+        </ul>
+    </div>
+        <h3>Electrical Works</h3>  
+        <p>
+            Home Repairs</p>
+
+<p>✔ Now Trending: Chandeliers, brass faucets, and smart toilets.</p>
+        </p>  
+        <div class="book">
+            <button onclick="gotonextpage()">BOOK NOW</button>
+           </div>
+            <script>
+                 function showService(serviceId) {
+            // Hide all content sections
+            document.querySelectorAll('.content').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show selected service
+            document.getElementById(serviceId).classList.add('active');
+        }
+            function gotonextpage(){
+                window.location.href="book.html";
+            }
+        </script>
+    </body>
+</html>

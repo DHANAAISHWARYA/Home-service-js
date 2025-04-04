@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/webp" href="logo1.webp">
+    <title>HOME SERVICE</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            text-align: center;
+            font-size: 30px;
+        }
+        h1 {
+            color: darkgray;
+            font-style: italic;
+        }
+        .clickable {
+            cursor: pointer;
+            
+        }
+        .clickable:hover{
+            font-size:40px;
+            color:green;
+            /* text-decoration: underline; */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to Home Service</h1>
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo1"></p>
+<p id="demo2" ></p>
+<p id="demo3"></p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo1").innerHTML = '<a href="login.html">Login</a>';
+    document.getElementById("demo2").innerHTML = '<a href="signin.html">Sign In</a>';
+    document.getElementById("demo3").innerHTML = '<a href="explore.html">Explore</a>';
+}
+</script>
+
+</body>
+</html>

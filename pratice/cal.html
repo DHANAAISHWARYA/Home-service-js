@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+    <head>
+        <style>
+          .bod{
+            border-style:solid;
+            border-color:black;
+            background-color:white;
+            padding:10px;
+            height:5px;
+            width:90px;
+          }
+          .img{
+            border-style:solid;
+            border-color:black;
+            background-color:black;
+            padding:50pxpx;
+            height:225px;
+            width:150px;
+            justify-content: center;
+            /* display: flex; */
+          }
+           .but{
+            border-style:solid;
+            border-radius:30px;
+            border-color:white;
+            background-color:orange;
+            text-align:center;
+            text-decoration: none;
+            padding:15px;
+            width:60px;
+            height:5px;
+            opacity:1;
+            /* transition:tranform 1s; */
+           *::before,*::after{
+            /* background-color:green; */
+            /* border-radius:10px; */
+            opacity:0.8;
+           }
+          }
+        </style>
+    </head>
+    <body>
+      <center>
+        <div class="img">
+          <div>
+          <input type="text" id="disp" class="bod">
+          </div>
+          <div>
+            <button type="button" value="1" onclick="msg(1)">1</button>
+            <button type="button" value="2" onclick="msg(2)">2</button>
+            <button type="button" value="3" onclick="msg(3)">3</button>
+            <button type="button" value="4" onclick="msg(4)">4</button>
+          </div><br>
+          <div>
+            <button type="button" value="5" onclick="msg(5)">5</button>
+            <button type="button" value="6" onclick="msg(6)">6</button>
+            <button type="button" value="7" onclick="msg(7)">7</button>
+            <button type="button" value="8" onclick="msg(8)">8</button>
+          </div><br>
+          <div>
+            <button type="button" value="9" onclick="msg(9)">9</button>
+            <button type="button" value="0" onclick="msg(0)">0</button>
+            <button type="button" value="+" onclick="msg('+')">+</button>
+            <button type="button" value="-" onclick="msg('-')">-</button>
+          </div><br>
+          <div>
+            <button type="button" value="*" onclick="msg('*')">*</button>
+            <button type="button" value="/" onclick="msg('/')">/</button>
+            <button type="button" value="=" onclick="calculate()">=</button>
+            <button type="button" value="clc" onclick="clearDisplay()">clc</button>
+          </div><br>
+        </div>
+      </center>
+    
+      <script>
+        function msg(value) {
+          let currentValue = document.getElementById("disp").value;
+          document.getElementById("disp").value = currentValue + value;
+        }
+    
+        function calculate() {
+          try {
+            let currentInput = document.getElementById("disp").value;
+            let result = eval(currentInput); // Evaluate the input string.
+            document.getElementById("disp").value = result; // Display the result.
+          } catch (e) {
+            document.getElementById("disp").value = 'Error'; // Display error in case of invalid input.
+          }
+        }
+    
+        function clearDisplay() {
+          document.getElementById("disp").value = ''; // Clear the input field.
+        }
+      </script>
+    </body>
+  

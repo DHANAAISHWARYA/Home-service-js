@@ -1,0 +1,247 @@
+<html> 
+    <head>
+        <link rel="icon" type="image/webp" href="logo1.webp">
+    <title>HOME SERVICE</title>
+     <style>
+        body{
+            background-color:white;
+            font-style: oblique;
+            text-align: center;
+            /* text-decoration: wavy; */
+        }
+        .boxs{
+            border-style:hidden;
+            /* background-color:darkblue; */
+            text-align:right;
+            display:flex;
+        }
+        .boxs p{
+            /* background-color:darkblue; */
+            color:gray;
+            margin-right:20px;
+        }
+        .boxs p:hover{
+          background-color:white;
+          color:black;
+          /* font-size:20px; */
+          font-style:italic;
+        }
+        .bod{
+            border-style:inset;
+            border-color:brown;
+            box-shadow: 10px 10px;
+        }
+        .cat{
+            border-style: hidden;
+            background-color:lightpink;
+            text-align:center;
+            /* border-radius:0px; */
+            border-color:gray;
+            padding:50px;
+           width:200px;
+           font-style: oblique;
+           font-size:30px;
+           display:flex;
+           gap:20px;
+        }
+        .clickable{
+            cursor:pointer;
+        }
+        .clickable:hover{
+           
+            color:blue;
+        }
+
+        li a{
+            font-size:20px;
+            color:black;
+            font-style:oblique;
+        }
+        li:hover{
+            font-size:30px;
+            font-style: oblique;
+        }
+.left-column h2 {
+    text-align: center;
+}
+
+.left-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-column li {
+    margin: 10px 0;
+}
+
+.left-column a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.left-column a:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+.right-column {
+    width:80px;
+    padding: 20px;
+    text-align: center;
+    gap:50px;
+}
+.right-column image{
+    border-style:outset;
+    padding:30px;
+    border-color:gray;
+    gap:30px;
+}
+.right-column p{
+    color:black;
+    font-style:italic;
+ font-size:20px;
+ /* width:750px; */
+ /* box-shadow:10px 10px; */
+ /* gap :30px; */
+}
+
+.right-column img {
+    /* width: 100%;
+    max-height: 500px; */
+    width:300px;
+    height:100px;
+    /* object-fit: contain; */
+    border-radius: 10px;
+    gap:30px;
+    /* transition: transform 1s; */
+}
+.right-column img:hover{
+    /* transform:scale(1.2); */
+  box-shadow: 10px 10px;
+}
+.slideshow {
+    display: flex;
+    width: 200%;
+    gap:30px;
+    /* animation: scrollHorizontal 10s linear infinite; */
+}
+
+/* Images */
+.slideshow img {
+    width: 400px; /* Same as container */
+    height: 250px;
+    object-fit: cover;
+}
+.image-box {
+    display:flexbox;
+}
+
+/* Show the selected image when targeted */
+.image-box:target {
+    display:block;
+}
+ 
+/* Image styling */
+ .image-box img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+} 
+/* Animation for scrolling */
+@keyframes scrollHorizontal {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+ } /* Moves left */
+ .contact{
+    border-style:solid;
+    border-radius:20px;
+    border-color:black;
+ }
+ .contact h2{
+    text-align:center;
+    font-style:italic;
+    color:lightsalmon;
+ }
+ .contact p{
+    font-style:oblique;
+    color:black;
+    cursor:pointer;
+    font-size:20px;
+ }
+ .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+ .contact p:hover{
+   color:blue;
+   font-size:20px;
+ }
+     </style>
+     </head>
+    <body>
+        <div class="boxs">
+          <div><p>Log_in </p></div>
+          <div><p>Sign_in </p></div>
+          <div><p>About_us </p></div>
+        </div>
+        <br><div class="bod">
+        <h1> HOME SERVICE</h1></div>
+        <br><br>
+        <div class="cat">
+            <div class="left-column">
+            <h3>ALL CATEGORIES</h3>
+            <ul class="clickable" >
+            <li class="clickable" onclick="showImage('homeclean.jpg', 'home')">Home Cleaning</li></ul>
+           <ul> <li class="clickable" onclick="showImage('handyman.jpg', 'furni')">Furniture Assembly</li></ul>
+            <ul><li class="clickable" onclick="showImage('electrical.jpg', 'elect')">Electrician</li></ul>
+            <ul><li class="clickable" onclick="showImage('plumbing.jpg', 'plumb')">Plumbing</li></ul>
+            </div>
+            <br>      
+            <div class="right-column">
+                <div class="slideshow-container">
+             <div class="slideshow">
+                <div id="home" class="image-box"><div><p>HOMECLEANING</p></div><a href="home.html"><img src="homeclean.jpg"></a></div>
+                <div id="furni" class="image-box"><div><P>FURNITURE WORK</P></div><a href="furni.html"><img src="handyman.jpg"></a></div>
+                <div id="elect" class="image-box"><div><p>ELECTRICAL</p></div><a href="elect.html"><img src="electrical.jpg"></a></div>
+                <div id="plumb" class="image-box"><div><p>PLUMBING</p></div><img src="plumbing.jpg"></a></div>
+              </div></div>
+         </div>
+         </div><br>
+         <div class="contact">
+          <h2> HOME SERVICE</h2>
+          <p>📍 Address:
+            123 Main Street,
+            K.K.NAGAR,
+            Trichy</p>
+            <p>📞 Phone: +1 (555) 123-4567</p>
+                <p>✉️ Email: contact@yourwebsite.com</p>
+                <p>🌐 Website: www.yourwebsite.com</p>
+                <h2>🔗 Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#">🌍 Website</a> |
+                    <a href="#">📘 Facebook</a> |
+                    <a href="#">🐦 Twitter</a> |
+                    <a href="#">📷 Instagram</a>
+                </div>
+         </div>
+         <script>
+            function showImage(imageSrc, id) {
+                // Remove highlight from all images
+                document.querySelectorAll('.image-box').forEach(imgBox => {
+                    imgBox.classList.remove('highlight');
+                    imgBox.style.display = 'none';
+                });
+    
+                // Show selected image and highlight it
+                let selectedImage = document.getElementById(id);
+                selectedImage.style.display = 'block';
+                selectedImage.classList.add('highlight');
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <link rel="icon" type="image/webp" href="logo1.webp">
+        <title>HOME SERVICE</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color:white;
+        }
+        .bod{
+            border-style:inset;
+            border-color:brown;
+            box-shadow: 10px 10px;
+            text-align:center;
+        }
+        h3{
+            font-style:italic;
+            color:palevioletred;
+            font-size:30px;
+        }
+        .butc{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+        }
+        button{
+            background-color:beige;
+            border-style:none;
+            border-radius:30px;
+            text-align:center;
+            color:black;
+            padding:15px;
+        }
+        button:hover{
+         background-color:pink;
+         color: white;
+        }
+        .content {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow:10px 10px;
+            max-width: 600px;
+            background-color:whitesmoke;
+            margin: auto;
+        }
+        .content.active {
+            display: block;
+        }
+        ul {
+            text-align: left;
+            padding: 0;
+        }
+        ul li {
+            list-style-type: none;
+            padding: 5px 0;
+        }
+        .book{
+           margin-left:100px;
+            text-align:center;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="bod">
+            <h1> HOME SERVICE</h1></div>
+            <br><br>
+            <h1>🏡 Home Cleaning Services</h1>
+        <h3>PROVIDES</h3><br>
+       <div class="butc">
+        <button onclick="showService('window')">General cleaning</button>
+        <button onclick="showService('carpet')">Living room cleaning</button>
+        <button onclick="showService('kitchen')">Kitchen cleaning</button>
+        <button onclick="showService('bathroom')">Bathroom Cleaning</button>
+       </div>
+       <div id="kitchen" class="content">
+        <h2>🍽 Kitchen Cleaning Services</h2>
+        <ul>
+            <li>✅ Countertops & backsplash cleaning</li>
+            <li>✅ Stovetop & oven deep cleaning</li>
+            <li>✅ Sink & faucet sanitization</li>
+            <li>✅ Cabinet surface cleaning</li>
+            <li>✅ Floor sweeping & mopping</li>
+            <li>✅ Appliance exterior cleaning (Microwave, fridge, etc.)</li>
+        </ul>
+    </div>
+
+    <!-- <!Bathroom Cleaning Section -->
+    <div id="bathroom" class="content">
+        <h2>🚿 Bathroom Cleaning Services</h2>
+        <ul>
+            <li>✅ Toilet scrubbing & disinfection</li>
+            <li>✅ Sink & mirror cleaning</li>
+            <li>✅ Shower & bathtub deep cleaning</li>
+            <li>✅ Tile & grout scrubbing</li>
+            <li>✅ Mold & mildew removal</li>
+        </ul>
+    </div>
+
+    <!-- Carpet Cleaning Section -->
+    <div id="carpet" class="content">
+        <h2>🛋 Carpet & Upholstery Cleaning</h2>
+        <ul>
+            <li>✅ Deep steam cleaning for carpets</li>
+            <li>✅ Stain removal & deodorization</li>
+            <li>✅ Sofa & upholstery vacuuming</li>
+            <li>✅ Allergy & dust mite treatment</li>
+        </ul>
+    </div>
+
+    <!-- Window Cleaning Section -->
+    <div id="window" class="content">
+        <h2>🪟 Window Cleaning Services</h2>
+        <ul>
+            <li>✅ Interior & exterior window cleaning</li>
+            <li>✅ Streak-free glass polishing</li>
+            <li>✅ Window frame & sill dusting</li>
+            <li>✅ Hard water stain removal</li>
+        </ul>
+    </div>
+       <h3>
+        📌 Why Choose Professional Home Cleaning?</h3>
+<p>✔ Time-Saving - Get a spotless home without the effort</p>
+<p>✔ Better Hygiene & Health- Removal of dust, germs, and allergens</p>
+<p>✔ Customizable Services – Choose what suits your needs</p>
+<p>✔ Trained Professionals – Experienced and reliable cleaners</p>
+<p>✔ Eco-Friendly Options – Safe for family and pets
+       </p>
+       <br>
+       <div class="book">
+        <button onclick="gotonextpage()">BOOK NOW</button>
+       </div>
+        <script>
+        function showService(serviceId) {
+            // Hide all content sections
+            document.querySelectorAll('.content').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show selected service
+            document.getElementById(serviceId).classList.add('active');
+        }
+        function gotonextpage(){
+            window.location.href="book.html";
+        }
+    </script>
+    </body>
+</html>
